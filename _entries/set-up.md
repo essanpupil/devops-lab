@@ -5,7 +5,9 @@ is-parent: yes
 title: Persiapan
 number: 2000
 ---
-Langkah-langkah persiapan sebelum mulai belajar Python antara lain:
-1. Download & install
-2. Software pendukung
-3. Menjalankan program
+Sebelum mulai berlatih DevOps, berikut ini hal-hal yang harus dipersiapkan.
+1. laptop 8GB RAM.
+2. vagrant
+3. python
+4. pip
+5. pycharm
