@@ -1,0 +1,3 @@
+[submodule "djblog"]
+	path = djblog
+	url = git@github.com:essanpupil/djblog.git
