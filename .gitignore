@@ -9,3 +9,4 @@
 /.brackets.json
 *.swp.vagrant/*
 *.log
+.vagrant/

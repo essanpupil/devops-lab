@@ -1,8 +1,8 @@
 ---
 sectionid: intro
 sectionclass: h1
-title: Pengertian DevOps
-number: 1000
+is-parent: yes
+title: Perkenalan
 ---
 Sekarang ini, dunia pengembangan perangkat lunak dituntut untuk semakin cepat memberikan hasil. Kecepatan proses pengembangan perangkat lunak tidak boleh melupakan aspek kualitas dari perangkat lunak yg dihasilkan.
 

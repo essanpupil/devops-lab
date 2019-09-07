@@ -49,13 +49,13 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  config.vm.provider "virtualbox" do |vb|
+  # config.vm.provider "virtualbox" do |vb|
   #   # Display the VirtualBox GUI when booting the machine
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-    vb.memory = "4096"
-  end
+  #   vb.memory = "1024"
+  # end
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -63,24 +63,8 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", inline: <<-SHELL
-    apt-get update
-    apt install -y openjdk-8-jdk postgresql nginx
-
-    wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
-    sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-    apt-get update
-    apt-get install -y jenkins
-
-    apt-get remove docker docker-engine docker.io containerd runc
-    apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    apt-key fingerprint 0EBFCD88
-    add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-    apt-get update
-    apt-get install -y docker-ce docker-ce-cli containerd.io
-    groupadd docker
-    usermod -aG docker jenkins
-    usermod -aG docker vagrant
-  SHELL
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
 end
